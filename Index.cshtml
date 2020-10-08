@@ -1,0 +1,27 @@
+﻿
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+    }
+
+    <div>
+        <h3>Розпродаж автомобілів</h3>
+        <table>
+            <tr>
+                <td><p>Фірма</p></td>
+                <td><p>Модель</p></td>
+                <td><p>Цiна</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Cars)
+            {
+                <tr>
+                    <td><p>@b.Corporation</p></td>
+                    <td><p>@b.Model</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id">Купити</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
